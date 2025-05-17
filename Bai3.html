@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baitapcuoituan</title>
+</head>
+<body>
+    <h1>Bài 3</h1>
+    <input type="text" id="name" oninput="HienThiTen()">
+    <h2 id="HT"></h2>
+    <script>
+        // Nhập tên
+        let name = prompt("Nhập tên của bạn: ");
+        // Hiển thị tên 
+        alert("Xin chào: "+ name);
+        console.log("Xin chào: "+ name);
+        document.write("Xin chào: "+ name);
+        function HienThiTen()
+        {
+            let name = document.getElementById("name").value;
+            document.getElementById("HT").innerHTML = "Xin chào: "+ name;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <center>
+        <table border="0" style="width: 450px; height: 400px; border-collapse: collapse;">
+            <tr>
+                <th colspan="4"><input style="width: 100%; height: 100%; font-weight: bold; font-size:xx-large;" id="display" type="text" value="" disabled></th>
+            </tr>
+            <tr>
+                <td><button style="width: 100%; height: 100%; font-weight: bold; font-size: large; background-color: rgb(201, 192, 192);" value="(" onclick="Hienthi(value);">(</button></td>
+                <td><button style="width: 100%; height: 100%; font-weight: bold; font-size: large; background-color: rgb(201, 192, 192);" value=")" onclick="Hienthi(value);">)</button></td>
+                <td><button style="width: 100%; height: 100%; font-weight: bold; font-size: large; background-color: rgb(201, 192, 192);" value="%" onclick="Hienthi(value);">%</button></td>
+                <td><button style="width: 100%; height: 100%; font-weight: bold; font-size: large; background-color: rgb(201, 192, 192);" onclick="AC()">AC</button></td>
+            </tr>
+            <tr>
+                <td><button style="width: 100%; height: 100%; font-weight: bold; font-size: large;" value="7" onclick="Hienthi(value);">7</button></td>
+                <td><button style="width: 100%; height: 100%; font-weight: bold; font-size: large;" value="8" onclick="Hienthi(value);">8</button></td>
+                <td><button style="width: 100%; height: 100%; font-weight: bold; font-size: large;" value="9" onclick="Hienthi(value);">9</button></td>
+                <td><button style="width: 100%; height: 100%; font-weight: bold; font-size: large; background-color: rgb(201, 192, 192);" value="/" onclick="Hienthi(value);">/</button></td>
+            </tr>
+            <tr>
+                <td><button style="width: 100%; height: 100%; font-weight: bold; font-size: large;" value="4" onclick="Hienthi(value);">4</button></td>
+                <td><button style="width: 100%; height: 100%; font-weight: bold; font-size: large;" value="5" onclick="Hienthi(value);">5</button></td>
+                <td><button style="width: 100%; height: 100%; font-weight: bold; font-size: large;" value="6" onclick="Hienthi(value);">6</button></td>
+                <td><button style="width: 100%; height: 100%; font-weight: bold; font-size: large; background-color: rgb(201, 192, 192);" value="*" onclick="Hienthi(value);">*</button></td>
+            </tr>
+            <tr>
+                <td><button style="width: 100%; height: 100%; font-weight: bold; font-size: large;" value="1" onclick="Hienthi(value);">1</button></td>
+                <td><button style="width: 100%; height: 100%; font-weight: bold; font-size: large;" value="2" onclick="Hienthi(value);">2</button></td>
+                <td><button style="width: 100%; height: 100%; font-weight: bold; font-size: large;" value="3" onclick="Hienthi(value);">3</button></td>
+                <td><button style="width: 100%; height: 100%; font-weight: bold; font-size: large; background-color: rgb(201, 192, 192);" value="-" onclick="Hienthi(value);">-</button></td>
+            </tr>
+            <tr>
+                <td><button style="width: 100%; height: 100%; font-weight: bold; font-size: large;" value="0" onclick="Hienthi(value);">0</button></td>
+                <td><button style="width: 100%; height: 100%; font-weight: bold; font-size: large;" value="," onclick="Hienthi(value);">.</button></td>
+                <td><button style="width: 100%; height: 100%; font-weight: bold; font-size: large; background-color: rgb(12, 99, 230);" onclick="TinhToan()">=</button></td>
+                <td><button style="width: 100%; height: 100%; font-weight: bold; font-size: large; background-color: rgb(201, 192, 192);" value="+" onclick="Hienthi(value);">+</button></td>
+            </tr>
+        </table>
+    </center>
+    <script>
+        function Hienthi(value)
+        {
+            document.getElementById("display").value += value;
+            console.log(document.getElementById("display").value);
+        }
+        function AC()
+        {
+            document.getElementById("display").value = "";
+        }
+        function TinhToan()
+        {
+            let a = document.getElementById("display").value;
+            document.getElementById("display").value = eval(a);
+        }
+    </script>
+</body>
+</html>

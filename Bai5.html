@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+</head>
+<body>
+    <h1>Bài 5: Tính diện tích Hình chữ nhật</h1>
+    <h3>Nhập chiều dài: <input id="num1" type="number"></h3>
+    <h3>Nhập chiều rộng: <input id="num2" type="number"></h3>
+    <h2 id="HT"></h2>
+    <button onclick="DTvaCV()">Tính diện tích !</button>
+    <script>
+        function DTvaCV()
+        {
+            let a = document.getElementById("num1").value,
+            b = document.getElementById("num2").value;
+            document.getElementById("HT").innerHTML = "Hình chữ nhật trên có diện tích là: " + (a * b) + " Và chu vi là: " + ((a * 1 + b * 1) * 2);
+        }
+    </script>
+</body>
+</html>

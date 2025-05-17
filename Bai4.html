@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+</head>
+<body>
+    <h1>Bài 4</h1>
+    <h3>Nhập số thứ 1: <input id="num1" type="number"></h3>
+    <h3>Nhập số thứ 2: <input id="num2" type="number"></h3>
+    <h2 id="HT"></h2>
+    <button onclick="Compare()">So Sánh 2 số !</button>
+    <script>
+        function Compare()
+        {
+            let a = document.getElementById("num1").value,
+            b = document.getElementById("num2").value;
+            if (a * 1 > b * 1)
+                document.getElementById("HT").innerHTML = "Số thứ nhất "+ a + " lớn hơn số thứ hai "+ b;
+            else if (a * 1 < b * 1)
+                document.getElementById("HT").innerHTML = "Số thứ nhất "+ a + " nhỏ hơn số thứ hai "+ b;
+            else
+                document.getElementById("HT").innerHTML = "Số thứ nhất "+ a + " bằng số thứ hai "+ b;
+        }
+    </script>
+</body>
+</html>
